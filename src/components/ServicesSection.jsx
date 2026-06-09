@@ -21,8 +21,16 @@ const ServicesSection = () => {
               transition={{ duration: 0.45, ease: 'easeOut' }}
               className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.045] shadow-2xl shadow-black/20 backdrop-blur"
             >
-              <div className={`h-44 bg-gradient-to-br ${card.imageTone}`}>
-                <div className="h-full w-full bg-[linear-gradient(135deg,rgba(255,255,255,0.18)_0_1px,transparent_1px_18px)] opacity-40" />
+              <div className={`relative h-44 overflow-hidden bg-gradient-to-br ${card.imageTone}`}>
+                {card.image ? (
+                  <img
+                    src={card.image}
+                    alt={`${card.title} refinery product`}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : null}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/75 via-navy-950/10 to-transparent" />
               </div>
               <div className="p-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-md bg-petroleum-400/15 text-gold-200 ring-1 ring-petroleum-200/20">

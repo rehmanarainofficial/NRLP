@@ -27,16 +27,14 @@ export const navigation = [
           'Production & Capacity',
           'Corporate Structure',
           'Future Plans',
-          'NRL At A Glance',
-          'Company Information',
-          'Performance',
-          'Land Marks',
-          'Management',
-          'Corporate Objectives',
-          'Projects',
-          'Contact List',
         ],
       },
+      'NRL At A Glance',
+      'Land Marks',
+      'Management',
+      'Corporate Objectives',
+      'Projects',
+      'Contact List',
     ],
   },
   {
@@ -103,7 +101,7 @@ export const hero = {
   eyebrow: 'National Refinery Limited Pakistan',
   title: "Powering Pakistan's Energy Future",
   subtitle:
-    "National Refinery Limited is a key player in Pakistan's petroleum refining sector, delivering fuel, lube base oils, asphalt, and speciality products with a commitment to safety, performance, and sustainable growth.",
+    "National Refinery Limited is engaged in manufacturing, production, and sale of petroleum products through a refinery complex comprising two lube refineries and one fuel refinery.",
   video: '/videos/refinery-bg.mp4',
   buttons: [
     { label: 'Explore Company', href: '#about', variant: 'primary' },
@@ -120,27 +118,30 @@ export const hero = {
 export const about = {
   title: 'About National Refinery Limited',
   eyebrow: 'Corporate overview',
-  body: 'National Refinery Limited is one of Pakistan’s leading petroleum refining companies, serving the country through fuel products, lube base oils, asphalt, speciality products, and industrial production facilities. The organization focuses on operational excellence, corporate governance, safety, environmental responsibility, and long-term value creation.',
+  body: 'National Refinery Limited (NRL) was incorporated on August 19, 1963, as a public limited company. The Government of Pakistan took over the management of NRL under the Economic Reforms Order, 1972, under the Ministry of Production, which was exercising control through its shareholding in State Petroleum Refining and Petrochemical Corporation (PERAC).',
   cards: [
     {
       icon: 'Building2',
-      title: 'Corporate Profile',
-      description: 'A trusted refining organization serving national energy needs with disciplined operations.',
+      title: 'Introduction',
+      description:
+        'The management of the Company was taken over by the (Attock) Pharaon Group in Pakistan on July 7, 2005, from the Government of Pakistan.',
     },
     {
       icon: 'Compass',
-      title: 'Vision & Mission',
-      description: 'Focused on responsible growth, reliability, and long-term industrial value creation.',
+      title: 'Vision',
+      description:
+        'Our passion is to attain distinctive leadership amongst the corporate success stories of tomorrow through professional competencies, value addition, human capital development, safety, occupational health, and environment.',
     },
     {
       icon: 'Gauge',
-      title: 'Production Capacity',
-      description: 'Integrated refining assets supporting fuels, lube base oils, asphalt, and specialties.',
+      title: 'Business Activities',
+      description:
+        'NRL is engaged in the manufacturing, production, and sale of a large range of petroleum products through three refineries.',
     },
     {
       icon: 'TrendingUp',
-      title: 'Future Plans',
-      description: 'Continuous modernization that strengthens safety, performance, and market resilience.',
+      title: 'Refinery Complex',
+      description: 'The Company’s refinery complex comprises three refineries, consisting of two lube refineries and one fuel refinery.',
     },
   ],
 }
@@ -154,24 +155,28 @@ export const products = {
       icon: 'Fuel',
       title: 'Fuel Products',
       description: 'High-value refinery streams supporting mobility, logistics, and national supply reliability.',
+      image: '/images/products/fuel-products.png',
       imageTone: 'from-sky-400/30 via-cyan-200/10 to-slate-950',
     },
     {
       icon: 'Droplets',
       title: 'Lube Base Oils',
       description: 'Base oil production for lubricants used across machinery, mobility, and industry.',
+      image: '/images/products/lube-base-oils.png',
       imageTone: 'from-amber-300/30 via-stone-200/10 to-slate-950',
     },
     {
       icon: 'Road',
       title: 'Asphalt',
       description: 'Infrastructure-grade asphalt products for roads, construction, and national development.',
+      image: '/images/products/asphalt.png',
       imageTone: 'from-zinc-300/25 via-slate-400/10 to-neutral-950',
     },
     {
       icon: 'FlaskConical',
       title: 'Speciality Products',
       description: 'Specialized refinery outputs supporting technical, commercial, and industrial applications.',
+      image: '/images/products/speciality-products.png',
       imageTone: 'from-blue-300/25 via-emerald-200/10 to-slate-950',
     },
   ],
@@ -180,7 +185,7 @@ export const products = {
 export const production = {
   title: 'Production & Refinery Operations',
   eyebrow: 'Operations',
-  description: 'Production areas are coordinated for reliability, quality assurance, and safe continuous operations.',
+  description: 'NRL is engaged in the manufacturing, production, and sale of a large range of petroleum products through an integrated refinery complex.',
   areas: [
     { icon: 'Ship', title: 'Keamari Terminal', description: 'Terminal handling and logistics for refinery movement.' },
     { icon: 'Factory', title: 'Lube Refinery', description: 'Processing streams dedicated to lube base oil production.' },
@@ -192,17 +197,41 @@ export const production = {
 }
 
 export const policies = {
-  title: 'Policies, HSE & Ethics',
-  eyebrow: 'Responsibility',
-  description: 'NRL places safety, governance, ethical conduct, and environmental accountability at the center of operations.',
-  items: ['HSE Policies', 'Code of Conduct', 'Whistle Blowing Policy', 'Gender Diversity Policy'],
+  title: 'Certifications & Public Warning',
+  eyebrow: 'Compliance',
+  description: 'NRL maintains internationally recognized management certifications and warns applicants to verify job offers through official channels.',
+  certifications: ['ISO 9001 Certified', 'ISO 14001 Certified', 'ISO 45001 Certified', 'Rated AA, A1 By PACRA'],
+  warningTitle: 'Beware of Fake Job Offers',
+  warningPoints: [
+    'NRL never randomly approaches people with job offers unless the person has submitted a CV and been interviewed.',
+    'No payment is expected from candidates for NRL jobs, which is considered highly unethical.',
+    'All NRL employees have official email addresses such as @nrlpak.com.',
+    'For verification, contact HR on 021-35064981-85, 021-35064977-79, or 021-35064135-37.',
+  ],
 }
 
 export const investors = {
-  title: 'Investor Relations',
-  eyebrow: 'Shareholder value',
-  description: 'Transparent investor communication, financial reporting, declarations, notices, and shareholder services.',
-  highlights: ['Financial Reports', 'Financial Highlights', 'Share Registrar', 'Corporate Briefing Session'],
+  title: "Investors' Grievances Contacts",
+  eyebrow: 'Investor support',
+  description: 'Shareholders and investors can reach the relevant NRL departments through the following official contact points.',
+  highlights: [
+    {
+      title: 'Treasurer',
+      description: 'PABX Ext. 2269 | Direct: 021-35054708 | Email: treasurer@nrlpak.com',
+    },
+    {
+      title: 'Shares Section',
+      description: 'PABX Ext. 2233 | Email: incharge_shares@nrlpak.com',
+    },
+    {
+      title: 'Financial Reports',
+      description: 'Access official company reporting and investor disclosures.',
+    },
+    {
+      title: 'Shareholder Information',
+      description: 'Investor services, notices, declarations, and shareholder records.',
+    },
+  ],
 }
 
 export const governance = {
@@ -234,7 +263,8 @@ export const footer = {
   summary:
     'National Refinery Limited is committed to operational excellence, industrial reliability, and responsible energy production for Pakistan.',
   contact: {
-    address: '7-B, Korangi Industrial Area, Karachi-74900, Pakistan.',
+    address: '7-B, Korangi Industrial Area, P.O. Box 8228, Karachi-74900, Pakistan.',
+    uan: '111-675-675',
     phones: ['+92-21-35064981-85', '+92-21-35064977-79', '+92-21-35064135-37'],
     fax: '+92-21-35054663',
     email: 'info@nrlpak.com',

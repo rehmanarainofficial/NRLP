@@ -8,8 +8,8 @@ const InvestorSection = () => {
       <div className="mx-auto max-w-7xl">
         <SectionHeader eyebrow={investors.eyebrow} title={investors.title} description={investors.description} />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {investors.highlights.map((title) => (
-            <AnimatedCard key={title} icon="TrendingUp" title={title} description="Accessible corporate disclosure and shareholder information for informed decision making." />
+          {investors.highlights.map((item) => (
+            <AnimatedCard key={item.title} icon="TrendingUp" title={item.title} description={item.description} />
           ))}
         </div>
       </div>

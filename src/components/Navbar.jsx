@@ -8,6 +8,7 @@ const { ArrowUpRight, ChevronDown, Menu, X } = icons
 
 const itemLabel = (item) => (typeof item === 'string' ? item : item.label)
 const itemChildren = (item) => (typeof item === 'string' ? [] : item.children || [])
+const directDesktopMenuCount = 6
 
 const DesktopMenuItem = ({ item, alignRight = false }) => {
   const children = itemChildren(item)
@@ -42,7 +43,7 @@ const DesktopSubItem = ({ item, alignRight = false }) => {
     <div className="group/sub relative">
       <a href="#" className="flex items-center justify-between gap-4 whitespace-nowrap rounded-md px-3 py-2.5 text-sm text-slate-200 transition hover:bg-white/8 hover:text-white">
         {itemLabel(item)}
-        {hasChildren ? <ChevronDown size={14} className="-rotate-90" /> : null}
+        {hasChildren ? <ChevronDown size={14} className={alignRight ? 'rotate-90' : '-rotate-90'} /> : null}
       </a>
       {hasChildren ? (
         <div
@@ -95,6 +96,8 @@ const MobileAccordion = ({ item, level = 0 }) => {
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const directDesktopMenus = navigation.slice(0, directDesktopMenuCount)
+  const moreDesktopMenus = navigation.slice(directDesktopMenuCount)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -119,18 +122,32 @@ const Navbar = () => {
           <img src={logo} alt="National Refinery Limited logo" className="h-12 w-12 rounded-md object-contain shadow-lg shadow-gold-300/20" />
           <span className="hidden shrink-0 leading-tight sm:block">
             <span className="block whitespace-nowrap text-sm font-semibold uppercase tracking-[0.14em] text-white">{companyIdentity.name}</span>
-            <span className="mt-1 block whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.05em] text-slate-300">
+            <span className="mt-1 block whitespace-nowrap text-[10px] font-medium uppercase tracking-wider text-slate-300">
               {companyIdentity.registration}
             </span>
-            <span className="block whitespace-nowrap text-[10px] font-medium uppercase tracking-[0.05em] text-slate-300">
+            <span className="block whitespace-nowrap text-[10px] font-medium uppercase tracking-wider text-slate-300">
               {companyIdentity.ntn}
             </span>
           </span>
         </a>
-        <div className="hidden min-w-0 flex-1 flex-wrap items-center justify-end gap-x-6 gap-y-1 xl:flex">
-          {navigation.map((item, index) => (
-            <DesktopMenuItem key={item.label} item={item} alignRight={index >= navigation.length - 4} />
+        <div className="hidden min-w-0 flex-1 flex-nowrap items-center justify-end gap-x-4 2xl:gap-x-6 xl:flex">
+          {directDesktopMenus.map((item) => (
+            <DesktopMenuItem key={item.label} item={item} />
           ))}
+          <div className="group relative shrink-0">
+            <button
+              type="button"
+              className="flex items-center gap-1 whitespace-nowrap py-2.5 text-sm font-medium text-slate-100 transition hover:text-gold-200"
+            >
+              More
+              <ChevronDown size={15} />
+            </button>
+            <div className="invisible absolute right-0 top-full z-50 min-w-72 translate-y-3 rounded-lg border border-white/10 bg-navy-950/95 p-2 opacity-0 shadow-2xl shadow-black/35 backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+              {moreDesktopMenus.map((item) => (
+                <DesktopSubItem key={item.label} item={item} alignRight />
+              ))}
+            </div>
+          </div>
         </div>
         <button
           type="button"

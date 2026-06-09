@@ -17,6 +17,7 @@ const Footer = () => {
           <p className="mt-5 max-w-md text-sm leading-7">{footer.summary}</p>
           <address className="mt-6 max-w-md space-y-3 text-sm not-italic leading-7 text-slate-300">
             <p>{footer.contact.address}</p>
+            <p>UAN: {footer.contact.uan}</p>
             <p>{footer.contact.phones.join(', ')}</p>
             <p>Fax: {footer.contact.fax}</p>
             <p>
