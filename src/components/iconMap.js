@@ -1,9 +1,11 @@
 import {
   ArrowUpRight,
+  ArrowUp,
   Atom,
   Award,
   Building2,
   ChevronDown,
+  CheckCircle2,
   Compass,
   Droplets,
   Factory,
@@ -18,16 +20,19 @@ import {
   ShieldCheck,
   Ship,
   TrendingUp,
+  TriangleAlert,
   X,
   Zap,
 } from 'lucide-react'
 
 export const icons = {
   ArrowUpRight,
+  ArrowUp,
   Atom,
   Award,
   Building2,
   ChevronDown,
+  CheckCircle2,
   Compass,
   Droplets,
   Factory,
@@ -42,6 +47,7 @@ export const icons = {
   ShieldCheck,
   Ship,
   TrendingUp,
+  TriangleAlert,
   X,
   Zap,
 }

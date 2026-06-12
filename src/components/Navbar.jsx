@@ -16,13 +16,13 @@ const DesktopMenuItem = ({ item, alignRight = false }) => {
 
   return (
     <div className="group relative shrink-0">
-      <a href="#" className="flex items-center gap-1 whitespace-nowrap py-2.5 text-sm font-medium text-slate-100 transition hover:text-gold-200">
+      <a href="#" className="flex items-center gap-1 whitespace-nowrap py-2.5 text-sm font-medium text-slate-100 transition duration-300 ease-out hover:text-gold-200">
         {itemLabel(item)}
-        {hasChildren ? <ChevronDown size={15} /> : null}
+        {hasChildren ? <ChevronDown size={15} className="transition duration-300 ease-out group-hover:rotate-180" /> : null}
       </a>
       {hasChildren ? (
         <div
-          className={`invisible absolute top-full z-50 min-w-64 translate-y-3 rounded-lg border border-white/10 bg-navy-950/95 p-2 opacity-0 shadow-2xl shadow-black/35 backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ${
+          className={`invisible absolute top-full z-50 min-w-64 origin-top translate-y-4 scale-95 rounded-lg border border-white/10 bg-navy-950/95 p-2 opacity-0 shadow-2xl shadow-black/35 backdrop-blur-xl transition-all duration-300 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 ${
             alignRight ? 'right-0' : 'left-0'
           }`}
         >
@@ -41,13 +41,13 @@ const DesktopSubItem = ({ item, alignRight = false }) => {
 
   return (
     <div className="group/sub relative">
-      <a href="#" className="flex items-center justify-between gap-4 whitespace-nowrap rounded-md px-3 py-2.5 text-sm text-slate-200 transition hover:bg-white/8 hover:text-white">
+      <a href="#" className="flex items-center justify-between gap-4 whitespace-nowrap rounded-md px-3 py-2.5 text-sm text-slate-200 transition duration-300 ease-out hover:bg-white/8 hover:text-white">
         {itemLabel(item)}
-        {hasChildren ? <ChevronDown size={14} className={alignRight ? 'rotate-90' : '-rotate-90'} /> : null}
+        {hasChildren ? <ChevronDown size={14} className={`transition duration-300 ease-out ${alignRight ? 'rotate-90' : '-rotate-90'}`} /> : null}
       </a>
       {hasChildren ? (
         <div
-          className={`invisible absolute top-0 z-50 min-w-72 rounded-lg border border-white/10 bg-charcoal-950/95 p-2 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-200 group-hover/sub:visible group-hover/sub:translate-x-0 group-hover/sub:opacity-100 ${
+          className={`invisible absolute top-0 z-50 min-w-72 scale-95 rounded-lg border border-white/10 bg-charcoal-950/95 p-2 opacity-0 shadow-2xl shadow-black/30 backdrop-blur-xl transition-all duration-300 ease-out group-hover/sub:visible group-hover/sub:translate-x-0 group-hover/sub:scale-100 group-hover/sub:opacity-100 ${
             alignRight ? 'right-full mr-2 -translate-x-2' : 'left-full ml-2 translate-x-2'
           }`}
         >
@@ -118,7 +118,7 @@ const Navbar = () => {
         </div>
       </div>
       <nav className="mx-auto flex max-w-[1920px] items-start justify-between gap-6 px-5 py-4 lg:px-6 xl:items-center">
-        <a href="#" className="flex shrink-0 items-center gap-3">
+        <a href="#top" className="flex shrink-0 items-center gap-3">
           <img src={logo} alt="National Refinery Limited logo" className="h-12 w-12 rounded-md object-contain shadow-lg shadow-gold-300/20" />
           <span className="hidden shrink-0 leading-tight sm:block">
             <span className="block whitespace-nowrap text-sm font-semibold uppercase tracking-[0.14em] text-white">{companyIdentity.name}</span>
@@ -142,7 +142,7 @@ const Navbar = () => {
               More
               <ChevronDown size={15} />
             </button>
-            <div className="invisible absolute right-0 top-full z-50 min-w-72 translate-y-3 rounded-lg border border-white/10 bg-navy-950/95 p-2 opacity-0 shadow-2xl shadow-black/35 backdrop-blur-xl transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="invisible absolute right-0 top-full z-50 min-w-72 origin-top translate-y-4 scale-95 rounded-lg border border-white/10 bg-navy-950/95 p-2 opacity-0 shadow-2xl shadow-black/35 backdrop-blur-xl transition-all duration-300 ease-out group-hover:visible group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100">
               {moreDesktopMenus.map((item) => (
                 <DesktopSubItem key={item.label} item={item} alignRight />
               ))}

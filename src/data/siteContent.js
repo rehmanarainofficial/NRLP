@@ -102,7 +102,7 @@ export const hero = {
   title: "Powering Pakistan's Energy Future",
   subtitle:
     "National Refinery Limited is engaged in manufacturing, production, and sale of petroleum products through a refinery complex comprising two lube refineries and one fuel refinery.",
-  video: '/videos/refinery-bg.mp4',
+  video: '/video.mp4',
   buttons: [
     { label: 'Explore Company', href: '#about', variant: 'primary' },
     { label: 'Investor Information', href: '#investors', variant: 'secondary' },
